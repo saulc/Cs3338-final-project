@@ -1,8 +1,16 @@
 \documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\usepackage{graphicx}
 \usepackage{tocloft} 
 \usepackage{glossaries}
 \usepackage{lipsum}
+\usepackage{geometry}
+\usepackage{fancyhdr} 
+\usepackage{amsmath}
+\usepackage{biblatex}  
+
+\addbibresource{references.bib}  
+
+\geometry{a4paper, margin= 1in}
 
 \makeglossaries
 \newglossaryentry{term}
@@ -32,6 +40,7 @@
 \tableofcontents
 \pagebreak
 
+\includegraphics[width=0.3\linewidth]{csula.png} 
 \section{Introduction}
 The \Gls{math} term tag must be used to include a glossary just like the citation/references \gls{term}. 
 \subsection{Purpose}
@@ -43,7 +52,7 @@ The competition is available at https://googlechromeai.devpost.com/
 \lipsum[2]
 
 \subsection{Overview}
-Our web application is a Project Management System similar to TestRails or Jira, using the built in Chrome \Gls{ai} API we will include ai generated descriptions and task creations with voice input. 
+Our web application is a Project Management System similar to TestRails or Jira, using the built in Chrome \Gls{ai} API we will include ai generated descriptions and task creations with voice input. We use the Chrome developer documentation\cite{dev} as main reference for developing a chrome extension.
 
 \section{System Architecture}
  
@@ -54,5 +63,5 @@ Our web application is a Project Management System similar to TestRails or Jira,
 \printglossaries
 
 % include references.
-
+\printbibliography
 \end{document}
