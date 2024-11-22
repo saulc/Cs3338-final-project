@@ -1,7 +1,33 @@
 \documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\usepackage{graphicx}
 \usepackage{tocloft} 
+\usepackage{glossaries}
+\usepackage{lipsum}
+\usepackage{geometry}
+\usepackage{fancyhdr} 
+\usepackage{amsmath}
+\usepackage{biblatex}  
 
+\addbibresource{references.bib}  
+
+\geometry{a4paper, margin= 1in}
+
+\makeglossaries
+\newglossaryentry{term}
+{
+    name=term,
+    description={the definition of the term}
+}
+\newglossaryentry{math}
+{
+    name=mathematics,
+    description={Mathematics is math is guess those don't need to match}
+}
+\newglossaryentry{ai}
+{
+    name=Artificial Intelligence (Ai),
+    description={an intelligence based on a computer system}
+}
 
 \title{Software Design Document (SDD)}
 \author{Group 1 }
@@ -14,16 +40,28 @@
 \tableofcontents
 \pagebreak
 
+\includegraphics[width=0.3\linewidth]{csula.png} 
 \section{Introduction}
+The \Gls{math} term tag must be used to include a glossary just like the citation/references \gls{term}. 
+\subsection{Purpose}
+Our project is based on a competition from Google to use Chrome's built in \Gls{ai} API's to interact with Gemini Nano or other Ai Models in a web app or Chrome browser extension. 
 
+The competition is available at https://googlechromeai.devpost.com/
+
+\subsection{Intended Audience}
+\lipsum[2]
+
+\subsection{Overview}
+Our web application is a Project Management System similar to TestRails or Jira, using the built in Chrome \Gls{ai} API we will include ai generated descriptions and task creations with voice input. We use the Chrome developer documentation\cite{dev} as main reference for developing a chrome extension.
 
 \section{System Architecture}
  
 \section{User Interface}
  
-\section{Glossary}
- 
+
+\pagebreak
+\printglossaries
 
 % include references.
-
+\printbibliography
 \end{document}
