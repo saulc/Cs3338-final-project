@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{tocloft} 
+\usepackage{glossaries}
+\usepackage{lipsum}
+\usepackage{geometry}
+\usepackage{fancyhdr} 
+\usepackage{amsmath}
+\usepackage{biblatex}  
+
+\addbibresource{../common/references.bib}  
+
+\geometry{a4paper, margin= 1in}
+
+\makeglossaries
+\newglossaryentry{term}
+{
+    name=term,
+    description={the definition of the term}
+}
+\newglossaryentry{math}
+{
+    name=mathematics,
+    description={Mathematics is math is guess those don't need to match}
+}
+\newglossaryentry{ai}
+{
+    name=Artificial Intelligence (Ai),
+    description={an intelligence based on a computer system}
+}
+
+\title{Software Requirement Specification (SRS)}
+\author{Group 1 }
+\date{November 26 2024}
+
+\begin{document}
+\maketitle  
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+\section*{Version History}
+\begin{longtable}{|c|c|p{10cm}|}
+\hline
+\textbf{Version} & \textbf{Date} & \textbf{Description} \\ \hline
+2.0 & \today & Filled out the introduction subsections 1.1 and 1.2.  \\ \hline
+\end{longtable}
+\pagebreak
+
+\includegraphics[width=0.3\linewidth]{../logo/csula.png} 
+
+\includegraphics[width=0.3\linewidth]{../logo/chromeai.png} 
+
+\section{Introduction}
+\subsection{Purpose}
+The purpose of this project is to describe the detailed requirements and design considerations for our project: "Google Chrome Built-in AI Challenge", available at https://googlechromeai.devpost.com/ 
+
+The project aims to leverage Chrome's built-in \Gls{ai} APIs to integrate functionalities powered by AI models such as Gemini Nano.
+
+As for this SRS, the goal is for it to serve as a comprehensive guide for stakeholders, developers, and testers that helps them understand the requirements and design aspects of this project.
+
+\subsection{Intended Audience}
+The intended audience for this project is:
+\begin{itemize}
+    \item \textbf{Developers:} Understanding the requirements and technical specifications for this project is very important for them to successfully integrate the API and properly design the user interface.
+    \item \textbf{Testers:} That way they can review the functional requirements and devise test plans to validate the project's features.
+    \item \textbf{Stakeholders:} So that they can ensure the project aligns with the goals of the Google Chrome Built-in AI Challenge and evaluate the outlined process for feasibility and compliance.
+\end{itemize}
+
+This document assumes the audience has some knowledge of software engineering principles, Chrome Extension development, and AI technologies.
+
+\subsection{Overview of the Software}
+The project is the development of a Chrome Extension or web application that uses Chrome's built-in \Gls{ai} APIs to integrate with other AI models. Some of the key aspects of the software include:
+
+\begin{itemize}
+    \item \lipsum[1]
+\end{itemize}
+
+This project serves as a guide for how to approach AI-driven browser-based applications that use Chrome's built-in capabilities and integrate them with other models.
+
+\section{External Interface Requirement}
+\subsection{User Interface}
+
+\subsection{Software Interface}
+
+
+\section{Legal and Ethical Considerations}
+\subsection{Data storage and privacy considerations}
+
+\subsection{Possible legal or ethical issue}
+
+\printglossaries
+\end{document}
