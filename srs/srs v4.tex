@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{tocloft} 
+\usepackage{glossaries}
+\usepackage{lipsum}
+\usepackage{geometry}
+\usepackage{fancyhdr} 
+\usepackage{amsmath}
+\usepackage{biblatex}  
+
+\addbibresource{../common/references.bib}  
+
+\geometry{a4paper, margin= 1in}
+
+\makeglossaries
+\newglossaryentry{term}
+{
+    name=term,
+    description={the definition of the term}
+}
+\newglossaryentry{math}
+{
+    name=mathematics,
+    description={Mathematics is math is guess those don't need to match}
+}
+\newglossaryentry{ai}
+{
+    name=Artificial Intelligence (Ai),
+    description={an intelligence based on a computer system}
+}
+
+\title{Software Requirement Specification (SRS)}
+\author{Group 1 }
+\date{November 29 2024}
+
+\begin{document}
+\maketitle  
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+\section*{Version History}
+\begin{longtable}{|c|c|p{10cm}|}
+\hline
+\textbf{Version} & \textbf{Date} & \textbf{Description} \\ \hline
+4.0 & \today & Filled out the 2.1 and 2.2 section \\ \hline
+\end{longtable}
+\pagebreak
+
+\includegraphics[width=0.3\linewidth]{../logo/csula.png} 
+
+\includegraphics[width=0.3\linewidth]{../logo/chromeai.png} 
+
+\section{Introduction}
+\subsection{Purpose}
+The purpose of this project is to describe the detailed requirements and design considerations for our project, "Google Chrome Built-in AI Challenge", available at \url{https://googlechromeai.devpost.com/}.
+
+The project aims to use Chrome's built-in AI APIs and integrate functionalities powered by AI models such as Gemini Nano, with the goal of developing a web application or Chrome Extension that's able to interact with these APIs in order to offer features like dynamic prompt generation, summarization of text, multilingual translation, and text rewriting.
+
+As for this Software Requirements Specification (SRS), its goal is to serve as a comprehensive guide for stakeholders, developers, and testers. It defines the functional and non-functional requirements, user interface specifications, and the system architecture in order to ensure a successful implementation of this project.
+
+\subsection{Intended Audience}
+The intended audience for this document includes:
+\begin{itemize}
+    \item \textbf{Developers:} So that they can understand the technical specifications and requirements necessary to integrate the needed APIs into a functional web application or extension. 
+    \item \textbf{Testers:} So that they can use this document to understand the functional requirements and design considerations. They'll need that in order to create and execute test cases to help validate the application’s features, ensuring that it meets the defined requirements.
+    \item \textbf{Stakeholders:} So that they can ensure that the project aligns with the goals of the challenge, evaluating its feasibility, business value, and compliance with technical and operational constraints.
+\end{itemize}
+
+This document assumes that the audience has a general understanding of software engineering principles, AI technologies, and Chrome Extension development.
+
+\subsection{Overview of the Software}
+ The project is the development of a Chrome Extension or web application that uses Chrome’s built-in Artificial Intelligence (Ai) APIs to integrate with other AI models. The main features of the software include:
+
+\begin{itemize}
+    \item \textbf{Dynamic Prompt Generation:} By using the Prompt API, the application allows users to dynamically create prompts based on their input, which enhances the interaction experience with the AI models.
+    \item \textbf{Summarization:} By using the Summarization API, the program will be able to condense large amounts of text into concise summaries, giving users clear insights from lengthy documents or articles.
+    \item \textbf{Multilingual Translation:}By using Translation API, users will be able to translate content into multiple languages, allowing for there to be accessibility and usability for diverse audiences.
+    \item \textbf{Text Rewriting:} By using the Rewrite API, alternative wordings or rephrases for the text will be suggested to the user in order for there to be better clarity or readability.
+\end{itemize}
+
+This project serves as a guide for how to approach the integration of AI-driven browser-based applications by using Chrome’s built-in capabilities. The goal is to build a user-friendly and efficient tool that empowers users to harness AI for everyday tasks without the need for server-side interactions.
+
+\section{External Interface Requirement}
+\subsection{User Interface}
+The user interface (UI) is designed to be intuitive and accessible, allowing for seamless interaction with the web application and the Chrome Extension. Some of the main components for the UI are:
+
+\begin{itemize}
+    \item \textbf{Main Dashboard:} The main area where the users can access the core functionalities, like prompt generation, text summarization, multilingual translation, and text rewriting. Each of these features will be represented by an icon or button for easy navigation.
+    \item \textbf{Prompt Input Box:} A text field where users will be able to input their queries or instructions. This box will support dynamic prompts as well as suggestions in case of misspellings or any other issues.
+    \item \textbf{Summarization Panel:} A section of the page where the users can either type, paste, or upload whatever text they'd like to be summarized. The results will be displayed in another text box under this one in a clear and concise format, while the original text remains there to allow for comparison.
+    \item \textbf{Translation Tool:} Another section of the page where the user can input their text and then select the language they'd like to translate to from a menu. While the program should automatically detect the language received, there's also an option to manually select what language is inputted. The translated text will be displayed instantly below the input box.
+    \item \textbf{Navigation Bar:} A menu bar located at the top of the application that will always be there no matter what, offering links to settings, user guides, feedback, and account management.
+\end{itemize}
+
+The UI will offer some tools and options including high-contrast mode, keyboard navigation, and screen reader support, improving usability for all users.
+
+\subsection{Software Interface}
+
+\section{Legal and Ethical Considerations}
+\subsection{Data storage and privacy considerations}
+
+\subsection{Possible legal or ethical issue}
+
+\printglossaries
+\end{document}
