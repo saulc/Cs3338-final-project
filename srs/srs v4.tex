@@ -84,19 +84,53 @@ This project serves as a guide for how to approach the integration of AI-driven 
 
 \section{External Interface Requirement}
 \subsection{User Interface}
-The user interface (UI) is designed to be intuitive and accessible, allowing for seamless interaction with the web application and the Chrome Extension. Some of the main components for the UI are:
+The user interface (UI) is designed to be intuitive and accessible, allowing for seamless interaction with the web application and the Chrome Extension. Some of the main components of the UI are:
 
 \begin{itemize}
     \item \textbf{Main Dashboard:} The main area where the users can access the core functionalities, like prompt generation, text summarization, multilingual translation, and text rewriting. Each of these features will be represented by an icon or button for easy navigation.
     \item \textbf{Prompt Input Box:} A text field where users will be able to input their queries or instructions. This box will support dynamic prompts as well as suggestions in case of misspellings or any other issues.
     \item \textbf{Summarization Panel:} A section of the page where the users can either type, paste, or upload whatever text they'd like to be summarized. The results will be displayed in another text box under this one in a clear and concise format, while the original text remains there to allow for comparison.
     \item \textbf{Translation Tool:} Another section of the page where the user can input their text and then select the language they'd like to translate to from a menu. While the program should automatically detect the language received, there's also an option to manually select what language is inputted. The translated text will be displayed instantly below the input box.
+    \item \textbf{Rewrite Suggestions Panel:} A side panel that displays alternative wordings or rephrased versions of what the user inputted. Users can select their preferred rewrite or choose to stick to what they wrote..
     \item \textbf{Navigation Bar:} A menu bar located at the top of the application that will always be there no matter what, offering links to settings, user guides, feedback, and account management.
 \end{itemize}
 
 The UI will offer some tools and options including high-contrast mode, keyboard navigation, and screen reader support, improving usability for all users.
 
 \subsection{Software Interface}
+The software interfaces allow for communication between the application and the built-in AI APIs, with some key interactions being:
+
+\begin{itemize}
+    \item \textbf{Prompt API:} 
+    \begin{itemize}
+        \item Input: User-provided text prompts or questions.
+        \item Output: Real-time suggestions and responses based on the user's input.
+        \item Communication: Uses JavaScript to send requests directly to the built-in Prompt API for processing.
+    \end{itemize}
+    
+    \item \textbf{Summarization API:}
+    \begin{itemize}
+        \item Input: Text content or uploaded documents.
+        \item Output: Condensed summaries highlighting the most important elements of the inputted text.
+        \item Communication: The application passes text data to the Summarization API, and the results are rendered in the Summarization Panel.
+    \end{itemize}
+    
+    \item \textbf{Translation API:}
+    \begin{itemize}
+        \item Input: Source text and selected language.
+        \item Output: Translated text in the target language.
+        \item Communication: The application invokes the Translation API with language parameters and renders the results in the Translation Tool interface.
+    \end{itemize}
+
+\item \textbf{Rewrite API:}
+    \begin{itemize}
+        \item Input: User-provided text.
+        \item Output: Alternative wordings, rephrased sentences, fixed spellings.
+        \item Communication: Text data is sent to the Rewrite API, and suggestions are displayed in the Rewrite Suggestions Panel.
+    \end{itemize}
+\end{itemize}
+
+The APIs are integrated directly into Chrome, which means can be accessed locally within the browser environment. This eliminates the need for external server calls, ensuring privacy and enhanced performance.
 
 \section{Legal and Ethical Considerations}
 \subsection{Data storage and privacy considerations}
