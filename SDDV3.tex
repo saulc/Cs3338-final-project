@@ -61,10 +61,10 @@ Our web application is a Project Management System similar to TestRails or Jira,
 
 \includegraphics[width=0.9\linewidth]{./logo/mockup.png} 
 
-The Ui is based on Material Ui\cite{mui}, the create new task page is shown above.
+The Ui is based on Material Ui\cite{mui}, the create new task page is shown above. It includes various options such as specifying which type of task you wish to create, choosing a length for that task, as well as adding any further notes that the user may wish to add.
 
 \subsection{Database}
-The database is a simple \Gls{sql} layout with a userid look table and a main task table. Users can only access tasks that were created by or shared to their userid.
+The database is a straightforward \Gls{sql} layout with a userid look table and a main task table. Users can only access tasks that were created by or shared to their userid. The UserID lookup table associates each user with a unique id, ensuring secure and efficient access to user-specific data. The main task table stores details about individual tasks, such as task descriptions, deadlines, and statuses. Access control is enforced, allowing users to view or modify only the tasks they have created or those explicitly shared with their UserID. This method ensures data integrity, privacy, and seamless task management across the platform.
 
 
 \pagebreak
