@@ -119,9 +119,38 @@ The software interfaces allow for communication between the application and the 
 The APIs are integrated directly into Chrome, which means can be accessed locally within the browser environment. This eliminates the need for external server calls, ensuring privacy and enhanced performance.
 
 \section{Legal and Ethical Considerations}
-\subsection{Data storage and privacy considerations}
+\subsection{Data Storage and Privacy Considerations}
+For our application, all interactions will occur within the local browser environment (Google Chrome). Here are a couple of considerations we'd like to address:
+\begin{itemize}
+    \item All user data will be securely processed within the browser. There will not be any form of external logging or monitoring on our user's activity.
+    \item User sensitive data will be encrypted.
+    \item Any cached data in use will be cleared once the application is closed, no sensitive information will be left on the user’s device.
+    \item Our application will abide by regulations such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). This means that the user is in control over both their privacy and personal data.
+\end{itemize}
+Our users will all be explicitly informed about how their data is handled and before our application starts processing information, we will explicitly ask the user for their consent.
 
-\subsection{Possible legal or ethical issue}
+\subsection{Possible Legal or Ethical Issues}
+A couple of potential legal and ethical concerns to take note of and address for our applicafion:
+\begin{itemize}
+    \item \textbf{Data Minimization:} Our software shall collect only the data necessary for it to function properly. User input data will not be stored longer than required unless granted permission or explicitly requested by the user.
+    \item \textbf{User Consent for Data Usage:} Users will be fully informed about how their data will be processed. They will have the ability to opt-in for data collection features such as saving input history or sharing data with third-party services.
+    \item \textbf{Artificial Intelligence Biases:} Due to our application being integrated with Gemini Nano, users must be wary that AI models such as ours may produce biased or incorrect results. Misunderstanding of this information could lead to misinformation or unintentional harm. It is our duty and responsibility to provide our users with clear disclaimers regarding the limitations and capabilities of Gemini Nano.
+    \item \textbf{Intellectual Property:} It is possible for our users to input copyrighted material into the our tools for summarization or rewriting. To avoid such legal issues, we will provide an explicit disclaimer informing users that they will be solely responsible for ensuring compliance with copyright laws.
+    \item \textbf{Licensing Compliance:} Adhering to the terms and conditions of the AI API providers is essential. Misuse of APIs could result in license revocation or legal disputes.
+\end{itemize}
+Ethical guidelines will be strictly enforced to ensure that the our application prioritizes the safety of our users and complies with all relevant laws and standards.
+
+\section{Glossary}
+\begin{longtable}{|p{3cm}|p{10cm}|}
+\hline
+\textbf{Acronym} & \textbf{Definition} \\ \hline
+AI & Artificial Intelligence: Simulating human intelligence in machines to perform tasks like learning, reasoning, and self-correction. \\ \hline
+API & Application Programming Interface: A set of functions and protocols that allow different software applications to communicate. \\ \hline
+CCPA & California Consumer Privacy Act: A California law that provides data privacy rights and protections for residents of California. \\ \hline
+GDPR & General Data Protection Regulation: A regulation in EU law on data protection and privacy in the European Union and the European Economic Area. \\ \hline
+SRS & Software Requirements Specification: A document that outlines the functional and non-functional requirements of a software application. \\ \hline
+UI & User Interface: The visual and interactive part of an application where users interact with the system. \\ \hline
+\end{longtable}
 
 \printglossaries
 \end{document}
