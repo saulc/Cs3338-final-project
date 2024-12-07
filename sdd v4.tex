@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{tocloft} 
+\usepackage{glossaries}
+\usepackage{lipsum}
+\usepackage{geometry}
+\usepackage{fancyhdr} 
+\usepackage{amsmath}
+\usepackage{biblatex}  
+
+\addbibresource{./common/references.bib}  
+
+\geometry{a4paper, margin= 1in}
+
+\makeglossaries
+\loadglsentries{./common/glossary}
+
+\title{Software Design Document (SDD)}
+\author{Group 1 }
+\date{November 20 2024}
+
+\begin{document}
+\maketitle  
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+\includegraphics[width=0.3\linewidth]{./logo/csula.png} 
+
+\includegraphics[width=0.3\linewidth]{./logo/chromeai.png} 
+\section{Introduction}
+
+\subsection{Purpose}
+Our project is based on a competition from Google to use Chrome's built in \Gls{ai} \Gls{api}'s to interact with Gemini Nano or other \Gls{ai} Models in a web app or Chrome browser extension. 
+
+The competition is available at https://googlechromeai.devpost.com/ \cite{devpost}
+
+\subsection{Intended Audience}
+Our Project Management system is designed to cater to Project Managers, Software Teams, Technical Stakeholders, and any individual or organization that requires a project management tool and values \Gls{ai} integration for task management. Whether it's automating task descriptions, simplifying project oversight, or improving team collaboration, our system is designed to meet the needs of both small teams and large organizations looking to optimize their project management processes.
+
+
+\subsection{Overview}
+Our web application is a Project Management System similar to TestRails or Jira, using the built in Chrome \Gls{ai} \Gls{api} we will include ai generated descriptions and task creations with voice input. We use the Chrome developer documentation\cite{dev} as main reference for developing a chrome extension.
+
+\section{System Architecture}
+
+\subsection{Workflow}
+
+\includegraphics[width=0.9\linewidth]{./logo/workflow.png} 
+
+\begin{itemize}
+    \item User: The user interacts with the system through the chrome extension interface. Voice inputs are then captured using the user's microphone for task creation. Commands and inputs are sent to the server for processing.
+    \item AI-Driven Task Management: User inputs are analyzed by \Gls{ai} algorithms on the server. \Gls{ai} generates task descriptions and suggestions, which are then sent back to the client-side for user review.
+    \item Data Handler: Task and project data are stored and retrieved from a central database. Real-time updates are sent to clients.
+    \item Project Update: Updates are processed and visualized on the dashboard in realtime. AI-generated insights are displayed to the user.
+\end{itemize}
+
+ 
+\section{User Interface}
+
+\includegraphics[width=0.9\linewidth]{./logo/mockup.png} 
+
+The \Gls{ui} is based on Material Ui\cite{mui}, the create new task page is shown above. It includes various options such as specifying which type of task you wish to create, choosing a length for that task, as well as adding any further notes that the user may wish to add.
+
+\subsection{Database}
+The database is a straightforward \Gls{sql} layout with a userid look table and a main task table. Users can only access tasks that were created by or shared to their userid. The UserID lookup table associates each user with a unique id, ensuring secure and efficient access to user-specific data. The main task table stores details about individual tasks, such as task descriptions, deadlines, and statuses. Access control is enforced, allowing users to view or modify only the tasks they have created or those explicitly shared with their UserID. This method ensures data integrity, privacy, and seamless task management across the platform.
+
+
+\pagebreak
+\printglossaries
+
+% include references.
+\printbibliography
+\end{document}
