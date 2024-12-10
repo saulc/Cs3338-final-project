@@ -8,16 +8,30 @@
 \usepackage{amsmath}
 \usepackage{biblatex}  
 
-\addbibresource{./common/references.bib}  
+\addbibresource{../common/references.bib}  
 
 \geometry{a4paper, margin= 1in}
 
 \makeglossaries
-\loadglsentries{./common/glossary}
+\newglossaryentry{term}
+{
+    name=term,
+    description={the definition of the term}
+}
+\newglossaryentry{math}
+{
+    name=mathematics,
+    description={Mathematics is math is guess those don't need to match}
+}
+\newglossaryentry{ai}
+{
+    name=Artificial Intelligence (Ai),
+    description={an intelligence based on a computer system}
+}
 
 \title{Software Requirement Specification (SRS)}
 \author{Group 1 }
-\date{November 29 2024}
+\date{December 3 2024}
 
 \begin{document}
 \maketitle  
@@ -30,17 +44,21 @@
 \begin{longtable}{|c|c|p{10cm}|}
 \hline
 \textbf{Version} & \textbf{Date} & \textbf{Description} \\ \hline
-4.0 & \today & Filled out the 2.1 and 2.2 section \\ \hline
+5.0 & December 3 2024 & Finished Document \\ \hline
+4.0 & November 29 2024 & Filled out the 2.1 and 2.2 section \\ \hline
+3.0 & November 27 2024 & Filled out the introduction subsections 1.3 and changed some 1.1 and 1.2 sections \\ \hline
+2.0 & November 26 2024 & Filled out the introduction subsections 1.1 and 1.2.  \\ \hline
+1.0 & November 26 2024 & Began document and laid out the foundation.  \\ \hline
 \end{longtable}
 \pagebreak
 
-\includegraphics[width=0.3\linewidth]{./logo/csula.png} 
+\includegraphics[width=0.3\linewidth]{../logo/csula.png} 
 
-\includegraphics[width=0.3\linewidth]{./logo/chromeai.png} 
+\includegraphics[width=0.3\linewidth]{../logo/chromeai.png} 
 
 \section{Introduction}
 \subsection{Purpose}
-The purpose of this project is to describe the detailed requirements and design considerations for our project, "Google Chrome Built-in \Gls{ai} Challenge", available at \url{https://googlechromeai.devpost.com/}.
+The purpose of this project is to describe the detailed requirements and design considerations for our project, "Google Chrome Built-in AI Challenge", available at \url{https://googlechromeai.devpost.com/}.
 
 The project aims to use Chrome's built-in AI APIs and integrate functionalities powered by AI models such as Gemini Nano, with the goal of developing a web application or Chrome Extension that's able to interact with these APIs in order to offer features like dynamic prompt generation, summarization of text, multilingual translation, and text rewriting.
 
@@ -120,25 +138,25 @@ The APIs are integrated directly into Chrome, which means can be accessed locall
 
 \section{Legal and Ethical Considerations}
 \subsection{Data Storage and Privacy Considerations}
-For our application, all interactions will occur within the local browser environment (Google Chrome). Here are a couple of considerations we'd like to address:
+All of the interactions for our application occur within the local browser environment (Google Chrome). Here are some considerations we'd like to address:
 \begin{itemize}
-    \item All user data will be securely processed within the browser. There will not be any form of external logging or monitoring on our user's activity.
-    \item User sensitive data will be encrypted.
-    \item Any cached data in use will be cleared once the application is closed, no sensitive information will be left on the user’s device.
-    \item Our application will abide by regulations such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). This means that the user is in control over both their privacy and personal data.
+    \item User data is processed securely within the browser, with no external logging or monitoring.
+    \item Sensitive data, such as text inputs, is encrypted in memory during processing.
+    \item Any cached data is cleared once the session ends, ensuring no residual information remains on the user’s device.
+    \item Full compliance with regulations like the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA) is maintained, ensuring user privacy and control over personal data.
 \end{itemize}
-Our users will all be explicitly informed about how their data is handled and before our application starts processing information, we will explicitly ask the user for their consent.
+Users will be explicitly informed about how their data is handled, and their consent will be obtained before accessing or processing any information.
 
 \subsection{Possible Legal or Ethical Issues}
-A couple of potential legal and ethical concerns to take note of and address for our applicafion:
+We'd also like to address some potential legal and ethical concerns:
 \begin{itemize}
-    \item \textbf{Data Minimization:} Our software shall collect only the data necessary for it to function properly. User input data will not be stored longer than required unless granted permission or explicitly requested by the user.
-    \item \textbf{User Consent for Data Usage:} Users will be fully informed about how their data will be processed. They will have the ability to opt-in for data collection features such as saving input history or sharing data with third-party services.
-    \item \textbf{Artificial Intelligence Biases:} Due to our application being integrated with Gemini Nano, users must be wary that AI models such as ours may produce biased or incorrect results. Misunderstanding of this information could lead to misinformation or unintentional harm. It is our duty and responsibility to provide our users with clear disclaimers regarding the limitations and capabilities of Gemini Nano.
-    \item \textbf{Intellectual Property:} It is possible for our users to input copyrighted material into the our tools for summarization or rewriting. To avoid such legal issues, we will provide an explicit disclaimer informing users that they will be solely responsible for ensuring compliance with copyright laws.
+    \item \textbf{Data Minimization:} The software shall collect only the data necessary for its core functionalities. User input data will not be stored longer than required unless explicitly requested or granted permission by the user.
+        \item \textbf{User Consent for Data Usage:} Users will be fully informed about how their data will be used, and they shall have the ability to opt-in for data collection features like saving input history or sharing data with third-party services.
+    \item \textbf{Artificial Intelligence Bias:} Gemini Nano may produce biased or incorrect results, which could lead to unintended harm or misinformation. It is our responsibility to provide clear explicit disclaimers about the limitations of our software.
+    \item \textbf{Intellectual Property:} Our users may input copyrighted material into the tool for summarization or rewriting. To avoid legal issues, a disclaimer will inform users that they are solely responsible for ensuring compliance with copyright laws.
     \item \textbf{Licensing Compliance:} Adhering to the terms and conditions of the AI API providers is essential. Misuse of APIs could result in license revocation or legal disputes.
 \end{itemize}
-Ethical guidelines will be strictly enforced to ensure that the our application prioritizes the safety of our users and complies with all relevant laws and standards.
+Our ethical guidelines will be strictly enforced to ensure that our application prioritizes user safety and complies with all relevant laws and standards.
 
 \section{Glossary}
 \begin{longtable}{|p{3cm}|p{10cm}|}
@@ -151,6 +169,7 @@ GDPR & General Data Protection Regulation: A regulation in EU law on data protec
 SRS & Software Requirements Specification: A document that outlines the functional and non-functional requirements of a software application. \\ \hline
 UI & User Interface: The visual and interactive part of an application where users interact with the system. \\ \hline
 \end{longtable}
+
 
 \printglossaries
 \end{document}

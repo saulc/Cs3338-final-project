@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{tocloft}
+\usepackage{glossaries}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{biblatex}
+
+\addbibresource{references.bib}
+
+\geometry{a4paper, margin=1in}
+\makeglossaries
+
+% Define glossary entries
+\newglossaryentry{ai}{
+    name=Artificial Intelligence (AI),
+    description={An intelligence based on a computer system}
+}
+\newglossaryentry{math}{
+    name=mathematics,
+    description={Mathematics is math is guess those don’t need to match}
+}
+\newglossaryentry{mysql}{
+    name=MySQL,
+    description={An open source database management system}
+}
+\newglossaryentry{term}{
+    name=term,
+    description={The definition of the term}
+}
+
+\title{Software Design Document (SDD)}
+\author{Group 1}
+\date{November 20, 2024}
+
+\begin{document}
+
+\maketitle
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+\section*{Version History}
+\begin{longtable}{|c|c|p{10cm}|}
+\hline
+\textbf{Version} & \textbf{Date} & \textbf{Description} \\ \hline
+2.0 &November 20, 2024 & Added glosary and references \\ \hline
+1.0 & November 20 2024 & Began document and laid out the foundation \\ \hline
+\end{longtable}
+\pagebreak
+
+\section{Introduction}
+\subsection{Purpose}
+Our project is based on a competition from Google to use Chrome’s built-in \gls{ai} APIs to interact with Gemini Nano or other AI models in a web app or Chrome browser extension. 
+
+The competition is available at \url{https://googlechromeai.devpost.com/}.
+
+\subsection{Intended Audience}
+Nam dui ligula, fringilla a, euismod sodales, sollicitudin vel, wisi. Morbi auctor lorem non justo. Nam lacus libero, pretium at, lobortis vitae, ultricies et, tellus. Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna, vitae ornare odio metus a mi. Morbi ac orci et nisl hendrerit mollis. Suspendisse ut massa. Cras nec ante. Pellentesque a nulla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam tincidunt urna. Nulla ullamcorper vestibulum turpis. Pellentesque cursus luctus mauris.
+
+\subsection{Overview}
+Our web application is a Project Management System similar to TestRails or Jira. Using the built-in Chrome \gls{ai} APIs, we will include AI-generated descriptions and task creation features with voice input. We use the Chrome developer documentation \cite{chrome_dev} as the main reference for developing a Chrome extension.
+
+\section{System Architecture}
+\subsection{Workflow}
+Details about the system workflow go here.
+
+\subsection{Site Breakdown}
+Details about the site breakdown go here.
+
+\section{User Interface}
+The UI is based on Material UI \cite{material_ui}. The "Create New Task" page is shown above.
+
+\subsection{Database}
+The database is a simple \gls{mysql} layout with a UserID lookup table and a main task table. Users can only access tasks that were created by or shared with their UserID.
+
+\section{Glossary}
+\printglossaries
+
+\section{References}
+\printbibliography
+
+\end{document}
