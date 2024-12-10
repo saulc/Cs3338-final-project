@@ -7,31 +7,11 @@
 \usepackage{fancyhdr} 
 \usepackage{amsmath}
 \usepackage{biblatex}  
-
-\addbibresource{../common/references.bib}  
-
-\geometry{a4paper, margin= 1in}
-
-\makeglossaries
-\newglossaryentry{term}
-{
-    name=term,
-    description={the definition of the term}
-}
-\newglossaryentry{math}
-{
-    name=mathematics,
-    description={Mathematics is math is guess those don't need to match}
-}
-\newglossaryentry{ai}
-{
-    name=Artificial Intelligence (Ai),
-    description={an intelligence based on a computer system}
-}
+\geometry{a4paper, margin=1in}
 
 \title{User Manual}
 \author{Group 1 }
-\date{November 20 2024}
+\date{\today}
 
 \begin{document}
 \maketitle  
@@ -44,32 +24,5 @@
 
 \includegraphics[width=0.3\linewidth]{../logo/chromeai.png} 
 \section{Introduction}
-The \Gls{math} term tag must be used to include a glossary just like the citation/references \gls{term}. 
-\subsection{Purpose}
-Our project is based on a competition from Google to use Chrome's built in \Gls{ai} API's to interact with Gemini Nano or other Ai Models in a web app or Chrome browser extension. 
 
-The competition is available at \cite{devpost}
-
-\cite{dev}
-
-\subsection{Title}
-\lipsum[2]
- 
-
-\section{System Requirements}
- \begin{itemize}
-  \item A computer running Google Chrome Web Browser
-  \item A Google Account to download from the Chrome web store
-  \item A Google account to setup save your projects
-  \item A microphone to use voice input features
-\end{itemize}
-
-\section{User Interface}
- 
-
-\pagebreak
-\printglossaries
-
-% include references.
-\printbibliography
 \end{document}
